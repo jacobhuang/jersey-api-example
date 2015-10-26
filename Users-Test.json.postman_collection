@@ -1,47 +1,68 @@
 {
-	"id": "16205d28-fd46-11b4-1906-6973c84cf5aa",
+	"id": "2fc18e23-b22d-0470-b925-ad1ec9d39a4a",
 	"name": "Users Test",
 	"description": "Tests that the Users urls work properly",
 	"order": [
-		"cea37b06-b96d-9cae-19c7-a89d688da8f9",
-		"9617fa17-e92c-7db5-c1ec-fdfd860ffa52",
-		"cfd31db4-3485-f752-bfae-34ce39402807",
-		"a7f96891-c284-c97c-b0cb-b0a808d3ad44",
-		"31939741-d191-dbea-b433-9c6a631f3c5a"
+		"1c319f8c-dde9-3c02-91e9-78a0bce4a327",
+		"6f4a387e-d8c2-3ee6-2676-dc021f705ea7",
+		"f8b9a260-49ad-2302-ab21-97cf04068858",
+		"5e681aba-71e5-95c0-f7d5-e4b8db3e6790",
+		"bf52cbae-4d66-5ddd-d841-cbc047fe9b32"
 	],
 	"folders": [],
 	"timestamp": 1445195529956,
 	"owner": 0,
-	"remoteLink": "",
 	"public": false,
+	"hasRequests": true,
 	"requests": [
 		{
-			"id": "31939741-d191-dbea-b433-9c6a631f3c5a",
-			"headers": "",
-			"url": "localhost:8080/api/users/{id}",
+			"id": "1c319f8c-dde9-3c02-91e9-78a0bce4a327",
+			"headers": "Content-Type: application/json\n",
+			"url": "localhost:8080/api/users",
 			"preRequestScript": "",
 			"pathVariables": {},
-			"method": "DELETE",
+			"method": "POST",
 			"data": [],
-			"dataMode": "params",
+			"dataMode": "raw",
 			"version": 2,
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1445199087093,
-			"name": "Delete a User",
-			"description": "Deletes the user from the system.\nGrab the id from the POST create user call.",
-			"collectionId": "16205d28-fd46-11b4-1906-6973c84cf5aa",
-			"responses": []
+			"time": 1445901684222,
+			"name": "Create a User",
+			"description": "Create a user named Dummy Test",
+			"collectionId": "2fc18e23-b22d-0470-b925-ad1ec9d39a4a",
+			"responses": [],
+			"rawModeData": "{\n    \"name\":\"Dummy Name\",\n    \"email\":\"dummy@gog.biz\"\n}"
 		},
 		{
-			"id": "9617fa17-e92c-7db5-c1ec-fdfd860ffa52",
+			"id": "5e681aba-71e5-95c0-f7d5-e4b8db3e6790",
+			"headers": "Content-Type: application/json\n",
+			"url": "localhost:8080/api/users/{id}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1445901848136,
+			"name": "Update a User",
+			"description": "Changes Dummy Test email.\nFill in the id in the body and url from the POST create user call.",
+			"collectionId": "2fc18e23-b22d-0470-b925-ad1ec9d39a4a",
+			"responses": [],
+			"rawModeData": "{\n    \"id\": <fill in id>,\n    \"name\":\"Dummy Edit\",\n    \"email\":\"dummy@gog.biz\"\n}"
+		},
+		{
+			"id": "6f4a387e-d8c2-3ee6-2676-dc021f705ea7",
 			"headers": "Content-Type: application/json\n",
 			"url": "localhost:8080/api/users",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
-			"collectionId": "16205d28-fd46-11b4-1906-6973c84cf5aa",
+			"collectionId": "2fc18e23-b22d-0470-b925-ad1ec9d39a4a",
 			"data": [
 				{
 					"key": "email",
@@ -68,73 +89,27 @@
 			"helperAttributes": {}
 		},
 		{
-			"id": "a7f96891-c284-c97c-b0cb-b0a808d3ad44",
-			"headers": "Content-Type: application/json\n",
-			"url": "localhost:8080/api/users",
-			"pathVariables": {},
+			"id": "bf52cbae-4d66-5ddd-d841-cbc047fe9b32",
+			"headers": "",
+			"url": "localhost:8080/api/users/{id}",
 			"preRequestScript": "",
-			"method": "POST",
-			"collectionId": "16205d28-fd46-11b4-1906-6973c84cf5aa",
-			"data": [
-				{
-					"key": "email",
-					"value": "dummytest@gmail.biz",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "name",
-					"value": "Dummy Test",
-					"type": "text",
-					"enabled": true
-				}
-			],
-			"dataMode": "params",
-			"name": "Update a User",
-			"description": "Changes Dummy Test email.\nFill in the id in the body and url from the POST create user call.",
-			"descriptionFormat": "html",
-			"time": 1445195629814,
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
 			"version": 2,
-			"responses": [],
 			"tests": "",
 			"currentHelper": "normal",
-			"helperAttributes": {}
-		},
-		{
-			"id": "cea37b06-b96d-9cae-19c7-a89d688da8f9",
-			"headers": "Content-Type: application/json\n",
-			"url": "localhost:8080/api/users",
-			"pathVariables": {},
-			"preRequestScript": "",
-			"method": "POST",
-			"collectionId": "16205d28-fd46-11b4-1906-6973c84cf5aa",
-			"data": [
-				{
-					"key": "email",
-					"value": "dummytest@gmail.biz",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "name",
-					"value": "Dummy Test",
-					"type": "text",
-					"enabled": true
-				}
-			],
-			"dataMode": "params",
-			"name": "Create a User",
-			"description": "Create a user named Dummy Test",
-			"descriptionFormat": "html",
-			"time": 1445195629814,
-			"version": 2,
+			"helperAttributes": {},
+			"time": 1445901755780,
+			"name": "Delete a User",
+			"description": "Deletes the user from the system.\nGrab the id from the POST create user call.",
+			"collectionId": "2fc18e23-b22d-0470-b925-ad1ec9d39a4a",
 			"responses": [],
-			"tests": "",
-			"currentHelper": "normal",
-			"helperAttributes": {}
+			"rawModeData": ""
 		},
 		{
-			"id": "cfd31db4-3485-f752-bfae-34ce39402807",
+			"id": "f8b9a260-49ad-2302-ab21-97cf04068858",
 			"headers": "Content-Type: application/json\n",
 			"url": "localhost:8080/api/users/{id}",
 			"preRequestScript": "",
@@ -168,7 +143,7 @@
 			"time": 1445198999120,
 			"name": "Get specific User",
 			"description": "Gets a specific user in the system. \nLook up the id from the POST for creating a user.",
-			"collectionId": "16205d28-fd46-11b4-1906-6973c84cf5aa",
+			"collectionId": "2fc18e23-b22d-0470-b925-ad1ec9d39a4a",
 			"responses": []
 		}
 	]
